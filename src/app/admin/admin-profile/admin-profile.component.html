@@ -1,0 +1,41 @@
+<mat-card>
+    <h1 class="text-center"><strong>Your profile details</strong></h1>
+    <mat-card-content>
+        <div class="container">
+            <div class="container text-center">
+                <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" 
+                alt="profile image" class="profile-image"/>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <!-- table -->
+
+                    <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+                        <!-- profile Column -->
+                        <ng-container matColumnDef="name">
+                          <th mat-header-cell *matHeaderCellDef> <h2>profile field </h2> </th>
+                          <td mat-cell *matCellDef="let transaction"> {{transaction.name}} </td>
+                          <td mat-cell *matCellDef="let transaction">  </td>
+                          
+                        </ng-container>
+                      
+                        <!-- user details Column -->
+                        <ng-container matColumnDef="value">
+                          <th mat-header-cell *matHeaderCellDef> <h2>Details</h2>  </th>
+                          <td mat-cell *matCellDef="let transaction">  {{transaction.value}}</td>
+                          
+                        </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        
+                      </table>
+
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

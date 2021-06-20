@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="">Jobportal.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="ml-auto">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"routerLink="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="registration">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="logout">Logout</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        </div>
+    </nav> 
+
+</div>
+ -->
+
+<p>
+    <mat-toolbar color="primary">
+        <button routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>work</mat-icon>
+        </button>
+        <span>JobPortal.com</span>
+        <span class="example-spacer"></span>
+        <div class="mx-3" *ngIf="!ser.isUserLogin()">
+            <button routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>login </mat-icon>
+            </button>
+            <span>login</span>
+        </div>
+        <div class="mx-2" *ngIf="!ser.isUserLogin()">
+            <button routerLink="registration" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>subscriptions </mat-icon>
+            </button>
+            <span>SignUp</span>
+        </div>
+
+        <div class="mx-2" *ngIf="ser.isUserLogin()">
+            <button (click)="onLogout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>logout</mat-icon>
+            </button>
+            <span>logout</span>
+        </div>
+        <div class="mx-2" *ngIf="ser.isUserLogin()">
+            <button (click)="onDashBord()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>person</mat-icon>
+            </button>
+            <span>{{user.userName}}</span>
+        </div>
+
+
+    </mat-toolbar>
+</p>

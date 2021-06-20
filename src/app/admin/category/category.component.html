@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let c of this.jobCategories">
+          <mat-icon matListIcon>folder</mat-icon>
+            <h3 matLine>{{c.title}}</h3>
+            <button mat-raised-button color="warn">delete</button>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+</mat-card>

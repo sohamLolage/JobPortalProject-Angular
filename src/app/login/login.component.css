@@ -1,0 +1,8 @@
+.header{
+    height: 90vh;
+    width:100%;
+    color: white;
+    background:linear-gradient(to right,rgba(1, 1, 14, 0.9),rgba(235, 147, 147, 0.3)),
+     url(https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+     background-size: cover;
+}

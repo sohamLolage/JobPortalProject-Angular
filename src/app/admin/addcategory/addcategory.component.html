@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <mat-card>
+                    <mat-card-title class="text-center h1">Add Categiry</mat-card-title>
+                    <form (ngSubmit)="onSubmit()">
+                        <!-- job Category -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Job Category</mat-label>
+                                <input type="text" required name="jobCategory" matInput placeholder="Enter Here"
+                                    [(ngModel)]="categiry.jobCategiry">
+                                <mat-icon matSuffix>category</mat-icon>
+                                
+                            </mat-form-field>
+                        </div>
+                       
+                        <div class="text-center my-3">
+                            <button type="submit" mat-raised-button color="primary">Add</button>
+                            <button type="reset" mat-raised-button color="accent" class="mx-5">Reset</button>
+                        </div>
+                    </form>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+

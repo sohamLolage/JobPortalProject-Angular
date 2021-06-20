@@ -1,0 +1,91 @@
+
+<div class="header">
+    <div class="container ">
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <mat-card>
+                    <mat-card-title class="text-center h1">Register Here</mat-card-title>
+                   
+                    <form (ngSubmit)="onSubmit()">
+                        <!-- id -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>User Id</mat-label>
+                                <input disabled type="text" name="id" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.id" required>
+                                <mat-icon matSuffix>looks_one</mat-icon>
+                               
+                            </mat-form-field>
+                        </div>
+                        <!-- userName -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>User Name</mat-label>
+                                <input disabled type="text" name="userName" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.userName" required>
+                                <mat-icon matSuffix>person_outline</mat-icon>
+                             
+                            </mat-form-field>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input type="text" name="email" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.email" required>
+                                <mat-icon matSuffix>email_outline</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- password -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>password</mat-label>
+                                <input type="password" name="password" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.password" required>
+                                <mat-icon matSuffix>lock_outline</mat-icon>
+                            </mat-form-field>
+                        </div>
+                         <!-- contact -->
+                         <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Contact</mat-label>
+                                <input  type="text" name="contact" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.contact" required>
+                                <mat-icon matSuffix>phone</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- fullName -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Full Name</mat-label>
+                                <input type="text" name="fullName" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.fullName" required>
+                                <mat-icon matSuffix>perm_identity</mat-icon>
+                            </mat-form-field>
+                        </div>
+                       
+                        <!-- role -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Role</mat-label>
+                                <input disabled type="text" name="role" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.role" required>
+                                <mat-icon matSuffix>how_to_reg</mat-icon>
+                            </mat-form-field>
+
+                        </div>
+                        
+                        <div class="text-center my-3">
+                            <button type="submit" mat-raised-button color="primary">Update</button>
+                           
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+
+
+    </div>
+</div>

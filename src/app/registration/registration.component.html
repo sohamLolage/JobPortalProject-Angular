@@ -1,0 +1,83 @@
+<div class="header">
+    <div class="container ">
+
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <mat-card>
+                    <mat-card-title class="text-center h1">Register Here</mat-card-title>
+                   
+                    <form (ngSubmit)="onSubmit()">
+                        <!-- userName -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>User Name</mat-label>
+                                <input type="text" name="userName" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.userName" required>
+                                <mat-icon matSuffix>person_outline</mat-icon>
+                                <mat-hint>user name should be unique</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input type="text" name="email" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.email" required>
+                                <mat-icon matSuffix>email_outline</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- password -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>password</mat-label>
+                                <input type="password" name="password" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.password" required>
+                                <mat-icon matSuffix>lock_outline</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- fullName -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Full Name</mat-label>
+                                <input type="text" name="fullName" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.fullName" required>
+                                <mat-icon matSuffix>perm_identity</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- contact -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>Contact</mat-label>
+                                <input type="text" name="contact" matInput placeholder="Enter Here"
+                                    [(ngModel)]="user.contact" required>
+                                <mat-icon matSuffix>phone</mat-icon>
+                            </mat-form-field>
+
+                        </div>
+                        <!-- role -->
+                        
+                        <div>
+                            <label id="example-radio-group-label">Are you Company or candidate</label>
+                            <mat-radio-group aria-labelledby="example-radio-group-label"  name="role" class="example-radio-group"
+                                [(ngModel)]="user.role">
+                                <mat-radio-button class="example-radio-button" *ngFor="let season of radio"
+                                    [value]="season">
+                                    {{season}}
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+
+
+                        <div class="text-center my-3">
+                            <button type="submit" mat-raised-button color="primary">Submit</button>
+                            <button type="reset" mat-raised-button color="accent" class="mx-5">Reset</button>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+
+
+    </div>
+</div>

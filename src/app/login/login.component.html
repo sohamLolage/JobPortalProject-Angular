@@ -1,0 +1,37 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <mat-card>
+                    <mat-card-title class="text-center h1">Login Here</mat-card-title>
+                    <form (ngSubmit)="onSubmit()">
+                        <!-- userName -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>User Name</mat-label>
+                                <input type="text" required name="userName" matInput placeholder="Enter Here"
+                                    [(ngModel)]="loginUser.userName">
+                                <mat-icon matSuffix>person_outline</mat-icon>
+                                <mat-hint>user name should be unique</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <!-- password -->
+                        <div class="mb-3">
+                            <mat-form-field style="width: 100%;" appearance="outline">
+                                <mat-label>password</mat-label>
+                                <input type="password" required name="password" matInput placeholder="Enter Here"
+                                    [(ngModel)]="loginUser.password">
+                                <mat-icon matSuffix>lock_outline</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="text-center my-3">
+                            <button type="submit" mat-raised-button color="primary">Submit</button>
+                            <button type="reset" mat-raised-button color="accent" class="mx-5">Reset</button>
+                        </div>
+                    </form>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
